@@ -1,0 +1,235 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'aileron-b';
+  src: url("../../build/fonts/aileron/Aileron-Bold.otf"); }
+
+@font-face {
+  font-family: 'aileron-r';
+  src: url("../../build/fonts/aileron/Aileron-Regular.otf"); }
+
+@font-face {
+  font-family: 'caladea-b';
+  src: url("../../build/fonts/caladea/caladea-bold.ttf"); }
+
+h1 {
+  font-family: caladea-b;
+  color: #333333; }
+
+p {
+  font-family: aileron-r;
+  color: #666666; }
+
+.wrapper {
+  /* размеры для осн.блока  */
+  max-width: 1920px;
+  max-height: 4200px; }
+
+.content {
+  /* внутри wrapper 3 блока  */
+  width: 100vw;
+  min-height: 50vw;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.red {
+  /* для красного текста */
+  color: #d63c37; }
+
+.underline {
+  /* для подчерк. текста  */
+  text-decoration: underline; }
+
+.header-text {
+  /* блок с текстом	 */
+  max-width: 1000px;
+  text-align: center;
+  margin: auto; }
+
+.top {
+  /* 1 блок внутри wrapper   */
+  background-image: url("../images/img1.png");
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%; }
+
+nav {
+  /* блок с меню бургером */
+  position: absolute;
+  top: 35px;
+  right: 35px; }
+  nav .button-menu {
+    /* кнопка меню */
+    width: 35px;
+    height: 35px;
+    font-size: 35px;
+    margin-bottom: 20px; }
+
+.link-menu {
+  /* блок с иконками ссылок */
+  font-size: 20px;
+  display: none; }
+  .link-menu div {
+    margin-bottom: 10px;
+    padding: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+    .link-menu div a {
+      margin: auto; }
+  .link-menu a {
+    /* ссылки внутри которых иконки	 */
+    width: 20px;
+    margin-bottom: 10px; }
+    .link-menu a:hover i {
+      color: red; }
+  .link-menu i {
+    /* иконки */
+    color: #7f7f7f; }
+
+.mid {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .mid > div > img {
+    width: 70%; }
+  .mid > div {
+    max-width: 580px;
+    height: 100%;
+    margin-right: 15px;
+    margin-top: 10px; }
+
+.text-mid {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  max-width: 490px; }
+  .text-mid h1 {
+    margin-bottom: 40px; }
+  .text-mid > div > div {
+    margin-left: 90px;
+    margin-bottom: 30px; }
+  .text-mid .box {
+    /* Позиционирование для иконки */
+    position: relative; }
+    .text-mid .box i {
+      position: absolute;
+      left: -40px;
+      top: 3px;
+      font-size: 14px; }
+
+.img-mid {
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end; }
+  .img-mid > img {
+    display: block;
+    margin-left: auto;
+    margin-right: 0; }
+
+.bot {
+  background-color: #d63c37; }
+  .bot p {
+    color: #333333; }
+  .bot .white-text {
+    color: #fcfcfc;
+    font-family: aileron-r;
+    font-size: 20px; }
+  .bot > div {
+    margin: auto;
+    max-width: 1080px; }
+  .bot > div > div {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse; }
+  .bot h1 {
+    text-align: right;
+    margin-right: 100px; }
+
+.bot-text {
+  max-width: 440px;
+  text-align: right;
+  padding-right: 100px;
+  position: relative; }
+  .bot-text span {
+    font-family: aileron-b; }
+
+.icon-bot {
+  border: #fcfcfc solid 2px;
+  width: 45px;
+  height: 45px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  position: absolute;
+  right: 25px;
+  top: 20px;
+  color: #fcfcfc;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .icon-bot i {
+    margin: auto; }
+  .icon-bot:hover {
+    background-color: #fcfcfc;
+    color: #d63c37; }
+
+@media screen and (max-width: 1280px) {
+  .header-text {
+    /* уменьшился блок с текстом в начале */
+    max-width: 75%; }
+  .mid > div {
+    margin-right: 0; }
+    .mid > div > div > div {
+      margin-left: 50px; }
+    .mid > div h1 {
+      text-align: center; }
+  .img-mid {
+    /* центрирование картины статуи */
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center; }
+    .img-mid img {
+      margin: auto; }
+  .top {
+    /* фоновое изображение верхнего блока стало фиксированным */
+    height: 640px;
+    -webkit-background-size: 1280px 640px;
+    background-size: 1280px 640px; } }
+
+@media screen and (max-width: 1079px) {
+  /* Уменьшились шрифты и отступы нижнего блока */
+  .bot h1 {
+    margin-right: 0;
+    text-align: center; }
+  .bot div {
+    margin: auto; } }
+
+@media screen and (max-width: 851px) {
+  /* Уменьшились шрифты */
+  h1 {
+    font-size: 25px; } }
+
+@media screen and (max-width: 600px) {
+  /* Уменьшились шрифты */
+  h1 {
+    font-size: 20px; }
+  p {
+    font-size: 13px; } }
+
+/*# sourceMappingURL=style.css.map */

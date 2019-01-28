@@ -1,0 +1,237 @@
+//Подключение шрифтов------------------------------------------------*
+@font-face{														   
+	font-family: 'aileron-b';                                      
+	src: url('../../build/fonts/aileron/Aileron-Bold.otf');        
+}																   
+@font-face{														   
+	font-family: 'aileron-r';                                      
+	src: url('../../build/fonts/aileron/Aileron-Regular.otf');     
+}                                                                  
+@font-face{                                                        
+	font-family: 'caladea-b';                                      
+	src: url('../../build/fonts/caladea/caladea-bold.ttf');        
+}                                                                  
+//-------------------------------------------------------------------*
+
+
+//Общие стили------------------------*
+h1{							       
+	font-family: caladea-b;        
+	color:#333333;                 
+}                                  
+p{                                 
+	font-family: aileron-r;        
+	color:#666666;                 
+}							       
+.wrapper{/* размеры для осн.блока  */  
+	max-width: 1920px;             
+	max-height: 4200px;            
+} 					               
+.content{/* внутри wrapper 3 блока  */ 
+	width: 100vw;                  
+	min-height: 50vw;              
+	display: flex;                 
+	overflow: hidden;      		   
+	flex-wrap: wrap;               
+}							       
+.red{/* для красного текста */	       
+	color:#d63c37;                 
+}						  	       
+.underline{/* для подчерк. текста  */  
+	text-decoration: underline;    
+}							       						  
+//-----------------------------------*
+
+
+//Верхний (1 блок wrappera)-------------------------------*
+.header-text{/* блок с текстом	 */                       	
+	max-width: 1000px;								   
+	text-align: center;	 							   	
+	margin:auto; 									   	
+}	                                                   		
+.top{/* 1 блок внутри wrapper   */                         
+	background-image: url("../images/img1.png"); 	   
+	background-size: 100% 100%;		                   
+}		                                               
+nav{/* блок с меню бургером */							   	
+	position: absolute;		                           
+	top: 35px;		                                   
+	right: 35px;		                               
+	.button-menu{/* кнопка меню */		                   
+		width: 35px;		                           
+		height: 35px;		                           
+		font-size: 35px;		                       
+		margin-bottom: 20px;		                   
+		}		                                       
+	} 		                                              
+.link-menu{/* блок с иконками ссылок */		               
+	font-size: 20px;		                           
+	display: none;		                               
+	div{		                                       
+		margin-bottom: 10px;		                   
+		padding: auto;		                           
+		display: flex;		                           
+		a{		                                       
+			margin:auto;		                       
+		}		                                       
+	}		                                           
+	a{/* ссылки внутри которых иконки	 */	           
+		width: 20px;		                           
+		margin-bottom: 10px;		                   
+		&:hover i{		                               
+			color:red;		                           
+		}		                                       
+	}		                                           
+	i{/* иконки */		                                   
+		color: #7f7f7f;		                           
+	}		                                           
+}		                                               
+//-------------------------------------------------------*
+
+//Центральный (2 блок wrappera)--------------------------*
+.mid {												   
+	justify-content: center;						   
+	& > div > img{									   
+		width: 70%; 								   
+	}												   
+	& > div{										   
+		max-width: 580px; 							   
+		height: 100%;								   
+		margin-right:15px;	                           
+		margin-top: 10px;	    					   
+	}												   
+}													   
+.text-mid{ 											   
+	align-self: center;								   
+	max-width: 490px;								   
+	h1{												   
+		margin-bottom: 40px;						   
+	}												   
+	& > div > div{									   
+		margin-left: 90px;							   
+		margin-bottom: 30px;						   
+	}												   
+	.box{/* Позиционирование для иконки */				   
+		position: relative;                            
+		i{											   
+		position: absolute;             			   
+		left:-40px;									   
+		top: 3px;									   
+		font-size: 14px;							   
+	}												   
+	} 												   
+}													   
+.img-mid{											   
+	align-self: flex-end;							   
+	& > img{										   
+		display: block;								   
+		margin-left: auto;							   
+		margin-right: 0;							   
+	}           									   
+}													   
+//-------------------------------------------------------*
+
+
+//Последний (3 блок wrappera)----------------------------*
+.bot{												   
+	background-color: #d63c37;						   
+	p{												   
+		color:#333333;								   
+	}												   
+	.white-text{									   
+		color:#fcfcfc;								   
+		font-family: aileron-r;						   
+		font-size: 20px;							   
+	}												   
+	& > div{										   
+		margin: auto;								   
+		max-width: 1080px;							   
+	}												   
+	& > div > div{									   
+		display: flex;								   
+		flex-wrap: wrap;							   
+		flex-direction: row-reverse;				   
+	}												   
+	h1{												   
+		text-align: right;							   
+		margin-right: 100px;						   
+	}												   
+}													   
+.bot-text{											   
+	max-width: 440px;							  	   
+	text-align: right;								   
+	padding-right: 100px;							   
+	position: relative;								   
+	span{											   
+		font-family: aileron-b;						   
+	}												   
+}													   
+.icon-bot{											   
+	border: #fcfcfc solid 2px;						   
+	width: 45px;									   
+	height: 45px;									   
+	border-radius: 50%;								   
+	position: absolute;								   
+	right: 25px;									   
+	top:20px;										   
+	color: #fcfcfc;									   
+	display: flex;									   
+	i{												   
+		margin:auto;								   
+	}												   
+	&:hover{										   
+		background-color:#fcfcfc; 					   
+		color: #d63c37;								   
+	}												   
+}													   
+//-------------------------------------------------------*
+
+//media---------------------------------------------media**
+@media screen and (max-width: 1280px){
+	.header-text{/* уменьшился блок с текстом в начале */
+		max-width: 75%;
+	}
+	.mid > div{
+		margin-right: 0;
+		& > div > div{
+			margin-left: 50px;
+		}
+		h1{
+			text-align: center;
+		}
+	}
+	.img-mid{/* центрирование картины статуи */
+		align-self: center;
+		img{
+			margin:auto;
+		}
+	}
+	.top{/* фоновое изображение верхнего блока стало фиксированным */
+		height: 640px;
+		background-size: 1280px 640px;	
+	}
+}
+@media screen and (max-width: 1079px){/* Уменьшились шрифты и отступы нижнего блока */
+	.bot{
+		h1{
+			margin-right: 0;
+			text-align: center;
+		}
+		div{
+			margin: auto;
+		}
+	}
+}
+@media screen and (max-width: 851px){/* Уменьшились шрифты */
+	h1{
+		font-size: 25px;
+	}
+}
+@media screen and (max-width: 600px){/* Уменьшились шрифты */
+	h1{
+		font-size: 20px;
+	}
+	p{
+		font-size:13px;
+	}
+}
