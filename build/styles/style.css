@@ -11,23 +11,30 @@
   font-family: 'caladea-b';
   src: url("../../build/fonts/caladea/caladea-bold.ttf"); }
 
+body {
+  margin: 0px; }
+
 h1 {
   font-family: caladea-b;
-  color: #333333; }
+  color: #333333;
+  font-size: 36px; }
 
 p {
   font-family: aileron-r;
-  color: #666666; }
+  color: #666666;
+  font-size: 18px;
+  line-height: 2; }
 
 .wrapper {
   /* размеры для осн.блока  */
   max-width: 1920px;
-  max-height: 4200px; }
+  max-height: 4200px;
+  margin: auto; }
 
 .content {
   /* внутри wrapper 3 блока  */
-  width: 100vw;
-  min-height: 50vw;
+  width: 100%;
+  min-height: 51vw;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -47,15 +54,19 @@ p {
 
 .header-text {
   /* блок с текстом	 */
-  max-width: 1000px;
+  max-width: 1200px;
   text-align: center;
-  margin: auto; }
+  margin: auto;
+  line-height: 1.5; }
+  .header-text h1 {
+    font-size: 48px; }
 
 .top {
   /* 1 блок внутри wrapper   */
   background-image: url("../images/img1.png");
   -webkit-background-size: 100% 100%;
-  background-size: 100% 100%; }
+  background-size: 100% 100%;
+  position: relative; }
 
 nav {
   /* блок с меню бургером */
@@ -92,15 +103,24 @@ nav {
     /* иконки */
     color: #7f7f7f; }
 
+.down {
+  font-size: 50px;
+  color: red;
+  position: absolute;
+  bottom: 50px;
+  left: 48%; }
+  .down:hover {
+    color: white; }
+
 .mid {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center; }
   .mid > div > img {
-    width: 70%; }
+    width: 80%; }
   .mid > div {
-    max-width: 580px;
+    max-width: 540px;
     height: 100%;
     margin-right: 15px;
     margin-top: 10px; }
@@ -109,7 +129,8 @@ nav {
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
-  max-width: 490px; }
+  max-width: 490px;
+  line-height: 2; }
   .text-mid h1 {
     margin-bottom: 40px; }
   .text-mid > div > div {
@@ -121,8 +142,9 @@ nav {
     .text-mid .box i {
       position: absolute;
       left: -40px;
-      top: 3px;
-      font-size: 14px; }
+      top: 10px;
+      font-size: 14px;
+      font-size: 18px; }
 
 .img-mid {
   -webkit-align-self: flex-end;
@@ -136,7 +158,8 @@ nav {
 .bot {
   background-color: #d63c37; }
   .bot p {
-    color: #333333; }
+    color: #333333;
+    line-height: 1.5; }
   .bot .white-text {
     color: #fcfcfc;
     font-family: aileron-r;
@@ -222,11 +245,15 @@ nav {
 
 @media screen and (max-width: 851px) {
   /* Уменьшились шрифты */
+  .header-text h1 {
+    font-size: 25px; }
   h1 {
     font-size: 25px; } }
 
 @media screen and (max-width: 600px) {
   /* Уменьшились шрифты */
+  .header-text h1 {
+    font-size: 20px; }
   h1 {
     font-size: 20px; }
   p {
